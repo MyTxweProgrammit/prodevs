@@ -1,15 +1,11 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
-// import NavBar from './components/NavBar'
-import Header from './components/Header'
+import Main from './components/Main'
 
 function App() {
 
   return (
-    <div className="w-screen h-screen">
-      <title>ProDEVs - Learn Everything About Programming!</title>
-      <Header />
-    </div>
+    <Main />
   )
 }
 

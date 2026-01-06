@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
 @layer utilities {
-    .border-test { border: 1px solid red; }
+    .border-test {
+        border: 1px solid red;
+    }
+
     .center {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .around {
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .prodevs_linear {
+        color: linear-gradient(to right, #c766ff, #2819fc);
     }
 }

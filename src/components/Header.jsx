@@ -11,7 +11,7 @@ export default function Header() {
     }
 
     return (
-        <div className="shadow-sm w-screen h-[60px] around">
+        <div className="shadow-sm w-screen h-[60px] around bg-white">
             <div className="center gap-[7px]">
                 <img src={CaptureLogo} alt="logo website" class="w-[32px] h-[30px]"/>
                 <div className="center">
