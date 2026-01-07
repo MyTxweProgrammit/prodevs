@@ -1,7 +1,10 @@
 import React from "react"
 import Header from "./Header"
 import CaptureLogo from "../assets/CaptureLogo.png"
+import Markdown from "../assets/Markdown.png"
 
+// doing next
+// media query for card 
 export default function Main() {
     return (
         <div className="w-screen h-screen">
@@ -22,7 +25,26 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <div className="bg-gradient-left w-screen h-[500px]"></div>
+            <div className="bg-gradient-left w-screen h-[500px] pt-[20px]"> 
+                <p className="font-bold text-[25px] ml-[20px] max-[520px]:text-[20px]">What will you learn?</p>
+                <p className="ml-[20px] bg-conic-180 from-indigo-600 via-indigo-50 to-indigo-600 text-transparent bg-clip-text max-[520px]:text-[13px]">Here is you might like.</p>
+                <div className="mt-[20px] ml-[20px]"> {/* border of card */}
+                    <div className="w-[300px] bg-[#1f2940] border border-solid border-transparent shadow-xl rounded-[10px] duration-[0.5s] hover:translate-x-[-10px] hover:translate-y-[-10px] cursor-pointer active:translate-x-[-10px] active:translate-y-[-10px]">
+                        <div className="center gap-[15px] w-fit mt-[20px] ml-[20px]">
+                            <div className="bg-white w-fit h-fit p-2 rounded-full">
+                                <img src={Markdown} className="w-[22px] h-[22px]"/>
+                            </div>
+                            <div>
+                                <p className="font-bold">MarkDown</p>
+                                <p className="text-sm mt-[-3px]">Mr.Nicolus Santhus</p>
+                            </div>
+                        </div>
+                        <p className="mx-[20px] mt-[10px] mb-[20px] text-[#7582a1] text-[13px]">
+                            Learn something about simple text organization. This name file is "md". So remember and prepare to look its value. You will got a very simple different text output.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
