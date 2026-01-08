@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import Header from './Header';
 
 const LoginPage = ({ login }) => {
     const [userId, setUserId] = useState('');
@@ -17,29 +18,66 @@ const LoginPage = ({ login }) => {
     };
 
     return (
-        <div>
-            <h2>Login Page</h2>
-            <div>
-                <input
-                    type="text"
-                    placeholder="User ID"
-                    value={userId}
-                    onChange={(e) => 
-                        setUserId(e.target.value)}
-                />
+        <div className='w-screen h-screen bg-white'>
+            <Header wants={true}/>
+            <div className='center pt-[30px]'>
+                <div className='border border-solid border-[#BFBFBF] w-[270px] pt-[20px] px-[28px] rounded-[10px] shadow-xl'>
+                    <p className='text-black font-bold inter-txwe text-[28px]'>Sign In</p>
+                    <p className='text-black inter-txwe text-[15px] mt-[-5px]'>Welcome Back My Friend!</p>
+                    <section className='mt-[20px]'>
+                        <p className='text-black inter-txwe text-[12px] font-bold'>Username or Email Address</p>
+                        <input
+                            className='text-[#A7A7A7] border border-solid border-[#A7A7A7] rounded-[5px] px-[15px] py-[6px] outline-none'
+                            type="text"
+                            placeholder="Example@gmail.com"
+                            value={userId}
+                            onChange={(e) => setUserId(e.target.value)} 
+                        />
+                    </section>
+                    <section className='mt-[20px] w-fit'>
+                        <aside className='flex justify-between items-center'>
+                            <p className='text-black inter-txwe text-[12px] font-bold'>Password</p>
+                            <Link className='text-[12px]'>Forgot Password?</Link>
+                        </aside>
+                        <input
+                            className='text-[#A7A7A7] border border-solid border-[#A7A7A7] rounded-[5px] px-[15px] py-[6px] outline-none'
+                            type="password"
+                            placeholder="Password"
+                            value={pass}
+                            onChange={(e) => setPass(e.target.value)}
+                        /> 
+                    </section>
+                    <section className="flex gap-[7px] mt-[10px]">
+                        <input type="checkbox" />
+                        <p className='text-black text-[12px] inter-txwe'>Remember Me</p>
+                    </section>
+                    <div 
+                        onClick={handleLogin}
+                        className='cursor-pointer bg-linear-to-r from-[#89CCFF] to-[#005DA4] inter-txwe text-[13px] text-center py-[8px] rounded-[20px] mt-[10px]'>
+                        Submit
+                    </div>
+                    {/* Do It HERE soon */}
+                </div>
             </div>
-            <div>
-                <input
-                    type="text"
-                    placeholder="Password"
-                    value={pass}
-                    onChange={(e) => 
-                        setPass(e.target.value)}
-                />
-            </div>
-            <button onClick={handleLogin}>Login</button>
         </div>
     );
 };
 
 export default LoginPage;
+
+{/* <input
+    type="text"
+    placeholder="User ID"
+    value={userId}
+    onChange={(e) =>
+        setUserId(e.target.value)}
+/>
+<input
+    type="text"
+    placeholder="Password"
+    value={pass}
+    onChange={(e) =>
+    setPass(e.target.value)}
+/> 
+<button onClick={handleLogin}>Login</button>
+*/}

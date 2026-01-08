@@ -12,7 +12,7 @@ export default function Main() {
     return (
         <div className="w-screen h-screen">
             <title>ProDEVs - Learn Everything About Programming!</title>
-            <Header />
+            <Header wants={false} />
             <div className="bg-white w-screen bg-white pt-[10%] pb-[25px] max-[450px]:pt-[80px]">
                 <div className="center"> {/* Logo */}
                     <img src={CaptureLogo} />
