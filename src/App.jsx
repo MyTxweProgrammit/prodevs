@@ -17,7 +17,7 @@ function App() {
         <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />} >
           <Route path="dashboard" element={<Dashboard logout={logout} />} />
         </Route>
-        <Route path="signin" element={<LoginPage login={login}/>} />
+        <Route path="/signin" element={<LoginPage login={login}/>} />
         <Route path="/" element={<Main />} />
       </Routes>
     </BrowserRouter>
