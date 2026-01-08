@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import CaptureLogo from "../assets/CaptureLogo.png"
+import { Link } from "react-router-dom"
 
 export default function Header() {
     const [touch, setTouch] = useState(false)
@@ -20,7 +21,9 @@ export default function Header() {
                 </div>
             </div>
             <div className="center gap-[10px]">
-                <div className="text-[#495199] font-medium rounded-lg py-[3px] px-[8px] duration-[0.6s] cursor-pointer hover:bg-[#94bdff] hover:text-white active:bg-[#94bdff] active:text-white">Login</div>
+                <Link to='/signin'>
+                    <div className="text-[#495199] font-medium rounded-lg py-[3px] px-[8px] duration-[0.6s] cursor-pointer hover:bg-[#94bdff] hover:text-white active:bg-[#94bdff] active:text-white">Login</div>
+                </Link>
                 <div className="text-white font-medium rounded-lg py-[3px] px-[8px] duration-[0.5s] cursor-pointer bg-[#003c9c] hover:bg-[#0062ff] active:bg-[#0062ff]">Get Started</div>
                 <div 
                     onMouseEnter={TrueAndChange} 
