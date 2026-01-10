@@ -5,13 +5,15 @@ const Dashboard = ({ logout }) => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
+        localStorage.removeItem('ss_token')
         logout();
         navigate('/');
     };
 
     return (
         <div>
-            <h2>Hello user welcome to Dashboard</h2>
+            <title>ProDEVs - Admin Dashboard</title>
+            <h2>Hello User Welcome to Admin Dashboard</h2>
             <h3>This page is protected</h3><br />
             <button onClick={handleLogout}>
                 Logout
