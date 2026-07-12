@@ -22,8 +22,20 @@ import { database } from "./../firebase-config";
 import { ref, onValue, update } from "firebase/database";
 import { Link } from "react-router-dom";
 import { usePopCash } from "./hooks/usePopCash";
+import { generateText } from "../../StrikerX_AI";
 
 export default function Main() {
+  useEffect(() => {
+    (async () => {
+      try {
+        const text = await generateText("hello");
+        console.log("Gemini ตอบกลับมาว่า:", text);
+      } catch (err) {
+        console.error("❌ เจอบั๊กตอนรันโค้ด:");
+        console.error(err);
+      }
+    })();
+  }, [])
   const { device } = useMediaQuery({
     breakpoints: { 
       mobile: 600,
